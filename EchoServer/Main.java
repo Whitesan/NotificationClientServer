@@ -17,6 +17,7 @@ public class Main {
         try (ServerSocket serverSocket = new ServerSocket(5000)) {
             while (true) {
                 Socket socket = serverSocket.accept();
+
                 Echoer echoer = new Echoer(socket, List);
                 echoer.start();
 
